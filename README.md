@@ -14,3 +14,12 @@ terraform plan
 ```sh
 terraform apply
 ```
+
+### Module usage example
+```sh
+module "sqs" {
+    source = "./sqs"
+    queue_name = "aws-queue"
+    dead_letter_queue_name = "aws-queue-dlq"
+}
+```
